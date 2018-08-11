@@ -2,7 +2,7 @@ const express = require('express');             // requiring express
 const bodyParser = require('body-parser');      // requiring body-parser
 const morgan = require('morgan');               // requiring morgan instead of custom middleware
 
-// const mongoose = require('');
+const mongoose = require('./config/db');        // requiring mongoose via config-db folder-file
 // const { Cricketer } = require('');
 
 const app = express();
