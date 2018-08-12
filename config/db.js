@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 // connecting mongoose to the mongodb on generated port and creating the db 'cricketers'
-mongoose.connect('mongodb://localhost:27017/cricketers', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/cricketersdb', {useNewUrlParser: true});
 
 // exporting mongoose to require it in app.js
 module.exports = mongoose;

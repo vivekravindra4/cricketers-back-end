@@ -26,5 +26,7 @@ const cricketerSchema = mongoose.Schema({
 // assign it to a variable such that it should represent a Class
 const Cricketer = mongoose.model('Cricketers', cricketerSchema);
 
-// exporting the 'Cricketer' model to app.js 
-module.exports = Cricketer;
+// exporting the 'Cricketer' model through object destructuring to app.js 
+module.exports = {
+    Cricketer
+}

@@ -4,6 +4,7 @@ const morgan = require('morgan');                       // requiring morgan inst
 
 const mongoose = require('./config/db');                // requiring mongoose via config-db folder-file
 const { Cricketer } = require('./models/cricketer');    // requiring the .Schema({}) and .model()
+const cricketersRouter = require('./routes/cricketers');// requiring the routes handlers 
 
 const app = express();
 const port = 3000;
@@ -14,11 +15,14 @@ app.use(bodyParser.json());
 // morgan - middleware, instead of logger-custom middlware
 app.use(morgan('short'));
 
+// creating a middleware for express.Router() handlers
+app.use('/cricketers',cricketersRouter);
+
 // sample/testing route handler
 app.get('/',(req,res) => {
     res.send({
         msg: 'Welcome to the page'
-    })
+    });
 });
 
 // localhost listening on port
